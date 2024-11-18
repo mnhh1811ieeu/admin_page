@@ -10,6 +10,10 @@ import { MdOutlineMessage } from "react-icons/md";
 import { IoNotificationsSharp } from "react-icons/io5";
 import { IoSettingsSharp } from "react-icons/io5";
 import { IoLogOutOutline } from "react-icons/io5";
+import { MyContext} from '../../App';
+import { useContext } from 'react';
+
+
 
 
 const Sidebar = () => {
@@ -17,6 +21,7 @@ const Sidebar = () => {
     const [activeTab, setActiveTab] = useState(0);
     const [isToggleSubmenu, setisToggleSubmenu] = useState(false);
 
+    const context = useContext(MyContext);
 
     const isOpenSubmenu = (index) => {
         setActiveTab(index);

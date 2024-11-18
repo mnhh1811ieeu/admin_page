@@ -20,7 +20,9 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Logout from '@mui/icons-material/Logout';
 import Divider from '@mui/material/Divider';
-
+import { MyContext } from '../../App';
+import { useContext } from 'react';
+import { MenuOpen, MenuOutlined } from '@mui/icons-material';
 
 
 const Header = () => {
@@ -29,6 +31,11 @@ const Header = () => {
     const [isOpennotificationDrop, setisOpennotificationDrop] = useState(false);
     const openNotifications = Boolean(isOpennotificationDrop);
     const openMyAcc = Boolean(anchorEl);
+
+    const [isLogin, setIsLogin] = useState(false);
+
+    const context = useContext(MyContext);
+
     const handleOpenMyAccDrop = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -59,7 +66,11 @@ const Header = () => {
                         </div>
 
                         <div className="col-sm-3 d-flex align-items-center part2 pl-4">
-                            <Button className="rounded-circle mr-3"><MdMenuOpen/></Button>
+                            <Button className="rounded-circle mr-3" onClick={()=>context.setIsToggleSidebar(!context.isToggleSidebar)}>
+                                {
+                                    context.isToggleSidebar === false ? <MenuOpen/> : <MenuOutlined/>
+                                }
+                            </Button>
                             <SearchBox/>
                         </div>
 
@@ -421,7 +432,10 @@ const Header = () => {
                                 </Menu>
 
                             </div>
-
+                            {
+                                context.isLogin !== true ? <Link to={'/login'}><Button className='btn-blue'>Sign In</Button></Link>
+                                : 
+                                
                             <div className="myAccWrapper">
                                 <Button className="myAcc d-flex align-items-center" onClick={handleOpenMyAccDrop}>
                                     <div className="userImg">
@@ -466,6 +480,7 @@ const Header = () => {
                                     </MenuItem>
                                 </Menu>
                             </div>
+                            }
                         </div>
                     </div>
                 </div>
