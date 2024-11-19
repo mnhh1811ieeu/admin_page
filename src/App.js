@@ -4,6 +4,7 @@ import './App.css';
 import Dashboard from './pages/Dashboard';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
+import ProductUpload from './pages/ProductUpload';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" exact={true} element={<Dashboard/>}/>
             <Route path="/dashboard" exact={true} element={<Dashboard/>}/>
+            <Route path="/product/upload" exact={true} element={<ProductUpload/>}/>
           </Routes>
         </div>
 
