@@ -29,8 +29,6 @@ const Login = () => {
                                 <input type='text' className='form-control' placeholder='enter your email' />
                             </div>
                         </form>
-                    </div>
-                    <div className='wrapper mt-3 card border p-4'>
                         <form>
                             <div className='form-group mb-3 position-relative'>
                                 <span className='icon'><RiLockPasswordFill/></span>
@@ -46,6 +44,7 @@ const Login = () => {
                             </div>
                         </form>
                     </div>
+                    
                 </div>
 
             </section>

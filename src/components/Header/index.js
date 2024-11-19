@@ -23,6 +23,7 @@ import Divider from '@mui/material/Divider';
 import { MyContext } from '../../App';
 import { useContext } from 'react';
 import { MenuOpen, MenuOutlined } from '@mui/icons-material';
+import UserAvatarImgComponent from '../userAvatarimg';
 
 
 const Header = () => {
@@ -438,10 +439,8 @@ const Header = () => {
                                 
                             <div className="myAccWrapper">
                                 <Button className="myAcc d-flex align-items-center" onClick={handleOpenMyAccDrop}>
-                                    <div className="userImg">
-                                        <span className="rounded-circle">
-                                            <img src="https://png.pngtree.com/png-clipart/20230825/original/pngtree-cute-little-beagle-dog-cartoon-sitting-picture-image_8725356.png"/>
-                                        </span>
+                                    <div>
+                                        <UserAvatarImgComponent img={'https://png.pngtree.com/png-clipart/20230825/original/pngtree-cute-little-beagle-dog-cartoon-sitting-picture-image_8725356.png'}/>
                                     </div>
 
                                     <div className="userInfo">

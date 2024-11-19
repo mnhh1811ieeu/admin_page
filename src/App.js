@@ -9,6 +9,8 @@ import { useEffect, useState } from 'react';
 import { createContext } from 'react';
 import SignUp from './pages/SignUp';
 import ProductUpload from './pages/ProductUpload';
+import Products from './pages/Products';
+import ProductDetails from './pages/ProductDetails';
 
 const MyContext = createContext();
 
@@ -16,7 +18,7 @@ const MyContext = createContext();
 function App() {
 
     const [isToggleSidebar, setIsToggleSidebar] = useState(false);
-    const [isLogin, setIsLogin] = useState(false);
+    const [isLogin, setIsLogin] = useState(true);
     const [isHideSiderbarAndHeader, setisHideSiderbarAndHeader] = useState(false);
     
 
@@ -54,6 +56,8 @@ function App() {
               <Route path="/login" exact={true} element={<Login/>}/>
               <Route path="/signup" exact={true} element={<SignUp/>}/>
               <Route path="/product/upload" exact={true} element={<ProductUpload/>}/>
+              <Route path="/product/list" exact={true} element={<Products/>}/>
+              <Route path="/product/details" exact={true} element={<ProductDetails/>}/>
             </Routes>
           </div>
 

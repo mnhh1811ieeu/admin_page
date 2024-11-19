@@ -43,7 +43,7 @@ const ProductUpload = () => {
         <div className='right-content w-100'>
             <div className='card shadow border-0 w-100 flex-row p-4'>
                 <h5 className='mb-0 '> ProductUpload</h5>
-                <Breadcrumbs aria-lable="breadcrumb" className='ml-auto breadcrumbs_'>
+                <Breadcrumbs aria-label="breadcrumb" className='ml-auto breadcrumbs_'>
                     <StyledBreadcrumb 
                         components="a"
                         href="#"
@@ -51,12 +51,12 @@ const ProductUpload = () => {
                         icon={<HomeIcon fontSize="small" />} />
                     <StyledBreadcrumb 
                         components="a"
-                        lable="Products"
+                        label="Products"
                         href="#"
                         deleteIcon={ <ExpandMoreIcon/>}
                         />
                     <StyledBreadcrumb 
-                        lable="Product Upload"
+                        label="Product Upload"
                         
                         deleteIcon={ <ExpandMoreIcon/>}
                         />
