@@ -5,6 +5,7 @@ import ExpandMoreIcon from'@mui/icons-material/ExpandMore';
 import { emphasize, styled } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
 import MenuItem from '@mui/material/MenuItem';
+import { IoClose } from "react-icons/io5";
 
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Rating from '@mui/material/Rating';
@@ -168,11 +169,52 @@ const ProductUpload = () => {
 
                             <br/>
 
-                            <Button className='btn-blue btn-lg btn-big'><MdCloudUpload /> &nbsp; PUBLISH AND VIEW</Button>
                             
+                        </div>
+
+                        <div className='card p-4 mt-0'>
+                        <div className='imagesUploadSec'>
+                            <h5 className='mb-4 mt-0'>Media And Published</h5>
+                            <div class="imgUploadRow">
+            
+                                <div class="uploadBox">
+                                    <span class="remove">×</span>
+                                    <div class="box">
+                                        <img
+                                            alt="image"
+                                            src="https://product.hstatic.net/1000026602/product/dsc03170_2dfd2355eeec459b8d7d634b0214d5ca.jpg"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="uploadBox">
+                                    <span class="remove">×</span>
+                                    <div class="box">
+                                        <img
+                                        alt="image"
+                                        src="https://mironcoder-hotash.netlify.app/images/product/single/01.webp"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="uploadBox">
+                                    <span class="remove">×</span>
+                                    <div class="box">
+                                        <p>Image upload area</p>
+                                    </div>
+                                </div>
+                            
+                            
+                            <br/>
+                            <Button className='btn-blue btn-lg btn-big'><MdCloudUpload /> &nbsp; PUBLISH AND VIEW</Button>            
+                            </div>
                         </div>
                     </div>
 
+                    
+                    
+                    <div/>
+                    </div>
                 </div>
             </form>
         </div>

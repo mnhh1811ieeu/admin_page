@@ -1083,3 +1083,73 @@ body.dark .form .form-group input,body.dark .form .form-group textarea{
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* Video 12*/
+
+
+
+/* Tiêu đề */
+.imagesUploadSec h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+}
+
+/* Hàng ảnh ngang */
+.imgUploadRow {
+  display: flex;
+  justify-content: space-between; /* Cách đều các hộp */
+  align-items: flex-start;
+  flex-wrap: nowrap; /* Không xuống dòng */
+  gap: 10px; /* Khoảng cách giữa các ảnh */
+}
+
+/* Hộp upload */
+.uploadBox {
+  position: relative;
+  width: 120px;
+  height: 150px;
+  border: 2px dashed #ccc; /* Viền nét đứt */
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Dấu xóa */
+.uploadBox .remove {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ảnh trong box */
+.uploadBox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh không méo */
+  border-radius: 4px;
+}
+
+/* Vùng tải lên (nếu không có ảnh) */
+.uploadBox .box {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}
